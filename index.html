@@ -1,49 +1,93 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Spock</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>Spock</h1>
+            <h3>Testing</h3>
+        </section>
+        <section>
+            <h3>What?</h3>
+            <img class="plain" style="max-width: 50%" src="images/spock.jpg">
+        </section>
+        <section>
+            <h3>No, really?</h3>
+            <ul>
+                <li class="fragment" data-fragment-index="1">Created in 2008 by Peter Niederwieser (Gradle)</li>
+                <li class="fragment" data-fragment-index="2">Joined by Luke Daley(Gradle)</li>
+                <li class="fragment" data-fragment-index="3">Spock 1.0 released in 2015</li>
+                <li class="fragment" data-fragment-index="4">Default Test framework in Grails</li>
+                <li class="fragment" data-fragment-index="5">Used internally by Gradle, Groovy, etc.</li>
+                <li class="fragment" data-fragment-index="6">Used by MongoDb, Tapestry, Netflix, JFrog</li>
+            </ul>
+            <p class="fragment" data-fragment-index="7">Hey, I really didn't know this, I found it on the Internet ;)
+            <p>
+        </section>
+        <section>
+            <h3>So how does it compare to JUnit</h3>
+            <ul>
+                <li class="fragment" data-fragment-index="1">Compatible with _ALL_ JUnit tools (i.e. behave like JUnit
+                    tests)
+                </li>
+                <li class="fragment" data-fragment-index="2">You can have a mixture of Spock and JUnit tests</li>
+                <li class="fragment" data-fragment-index="3">They all run together</li>
+                <li class="fragment" data-fragment-index="4">Supported by Maven, Gradle, Intellij, Eclipse, Sonar</li>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            </ul>
+        </section>
+        <section>
+            <h3>So why should we use it</h3>
+            <ul>
+                <li class="fragment" data-fragment-index="1">Clearly marks phases (given, when, then, expect, ...)</li>
+                <li class="fragment" data-fragment-index="2">Both sides of an assert are analyzed (better reporting than JUnit)</li>
+                <li class="fragment" data-fragment-index="2">Built in Mocking</li>
+            </ul>
+        </section>
+    </div>
+</div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
